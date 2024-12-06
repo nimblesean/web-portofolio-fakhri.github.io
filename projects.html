@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Effect with Portfolio</title>
+    <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+
+            body {
+              min-height: 100vh;
+              display: flex;
+              flex-direction: column; /* Mengatur arah flex menjadi kolom */
+              align-items: center;
+              background: #000;
+              color: #fff; /* Warna teks default */
+            }
+
+            /* Navbar Styles */
+            .navbar {
+              width: 100%;
+              background: #000000; /* Warna latar belakang navbar */
+              display: flex;
+              justify-content: space-between; /* Memisahkan logo dan link */
+              align-items: center; /* Vertikal center */
+              padding: 1rem 2rem; /* Padding di dalam navbar */
+              position: relative; /* Untuk positioning */
+            }
+
+            .navbar .logo {
+              font-size: 1.5rem; /* Ukuran font logo */
+              font-weight: bold; /* Tebal */
+              background: linear-gradient(
+                45deg,
+                #ff007f,
+                #00bfff,
+                #00d9ff
+              ); /* Gradien warna */
+              -webkit-background-clip: text; /* Memotong latar belakang ke teks */
+              -webkit-text-fill-color: transparent; /* Mengisi warna teks dengan transparan */
+              animation: gradient-animation 5s ease infinite; /* Animasi gradien */
+            }
+
+            @keyframes gradient-animation {
+              0% {
+                background-position: 0% 50%;
+              }
+              100% {
+                background-position: 100% 50%;
+              }
+            }
+
+            .navbar .nav-links {
+              display: flex; /* Menampilkan link secara horizontal */
+              gap: 1.5rem; /* Jarak antar link */
+              position: relative;
+              justify-content: center;
+              align-items: center;
+              padding: 0.4rem 2rem;
+              border: 2px solid aqua;
+              border-radius: 16px;
+              font: 500 1rem "IBM Plex Sans", sans-serif;
+              color: #fff;
+              overflow: hidden;
+              mix-blend-mode: difference;
+            }
+
+            .navbar .nav-links a {
+              color: white; /* Warna teks link */
+              text-decoration: none; /* Menghilangkan garis bawah */
+              font-size: 1rem; /* Ukuran font link */
+              transition: color 0.3s; /* Transisi saat hover */
+            }
+
+            .navbar .nav-links a:hover {
+              color: #00eeff; /* Warna saat hover */
+            }
+
+            svg {
+              width: 100%;
+              height: 100%;
+              font-family: "Raleway", sans-serif; /* Pastikan font Raleway diimpor jika diperlukan */
+            }
+
+            svg text {
+              text-transform: uppercase;
+              font-size: 5rem;
+              animation: stroke 5s infinite alternate-reverse;
+              fill: none; /* Tidak ada warna isi untuk efek stroke */
+              stroke: rgb(0, 240, 232); /* Warna stroke */
+              stroke-width: 0; /* Lebar stroke awal */
+            }
+
+            @keyframes stroke {
+              0% {
+                stroke-width: 0;
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+              }
+              70% {
+                stroke: white;
+              }
+              80% {
+                stroke: white;
+                stroke-width: 3;
+              }
+              100% {
+                stroke: white;
+                stroke-width: 0;
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+              }
+            }
+
+            .portfolio {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr); /* Mengatur grid menjadi 4 kolom */
+          gap: 1rem; /* Jarak antar kartu */
+          padding: 2rem; /* Padding di sekitar grid */
+          width: 100%; /* Lebar grid 100% */
+          max-width: 1200px; /* Maksimal lebar grid */
+          margin: 0 auto; /* Memusatkan grid di tengah */
+      }
+            }
+
+            .card {
+              background: #1a1a1a; /* Warna latar belakang kartu */
+              border-radius: 0px; /* Sudut melengkung */
+              overflow: hidden; /* Menghindari gambar keluar dari kartu */
+              transition: transform 0.3s; /* Transisi saat hover */
+            }
+
+            .card:hover {
+              transform: scale(1.05); /* Efek zoom saat hover */
+            }
+
+            .card img {
+              width: 100%; /* Gambar memenuhi lebar kartu */
+              height: auto; /* Mempertahankan rasio aspek */
+              transition: transform 0.3s; /* Transisi saat hover */
+            }
+
+            .card img:hover {
+              transform: scale(1.1); /* Efek zoom pada gambar saat hover */
+            }
+
+            /* Media Queries untuk Responsivitas */
+            @media (max-width: 1200px) {
+              .portfolio {
+                grid-template-columns: repeat(
+                  3,
+                  1fr
+                ); /* 3 kolom untuk layar lebih kecil */
+              }
+            }
+
+            @media (max-width: 900px) {
+              .portfolio {
+                grid-template-columns: repeat(
+                  2,
+                  1fr
+                ); /* 2 kolom untuk layar lebih kecil */
+              }
+            }
+
+            @media (max-width: 600px) {
+              .portfolio {
+                grid-template-columns: 1fr; /* 1 kolom untuk layar kecil */
+              }
+
+              .navbar .logo {
+                font-size: 1.2rem; /* Ukuran font logo lebih kecil */
+              }
+
+              .navbar .nav-links {
+                padding: 0.4rem 1rem; /* Padding lebih kecil */
+              }
+
+              svg text {
+                font-size: 3rem; /* Ukuran font SVG lebih kecil */
+              }
+            }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">Ferry Kurniawan Hutagalung</div>
+      <div class="nav-links">
+        <a href="javascript:history.back()">Home</a>
+      </div>
+    </div>
+
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" text-anchor="middle">UI/UX</text>
+    </svg>
+
+    <div class="portfolio">
+      <div class="card">
+        <img src="assets/project-1.jpg" alt="Project 1" />
+      </div>
+      <div class="card">
+        <img src="assets/project-2.jpg" alt="Project 2" />
+      </div>
+      <div class="card">
+        <img src="assets/project-3.jpg" alt="Project 3" />
+      </div>
+      <div class="card">
+        <img src="assets/project-4.jpg" alt="Project 4" />
+      </div>
+    </div>
+
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" text-anchor="middle">PHOTOGRAPHY</text>
+    </svg>
+
+    <div class="portfolio">
+      <div class="card">
+        <img src="assets/project-5.png" alt="Project 1" />
+      </div>
+      <div class="card">
+        <img src="assets/project-6.png" alt="Project 2" />
+      </div>
+      <div class="card">
+        <img src="assets/project-12.jpeg" alt="Project 3" />
+      </div>
+      <div class="card">
+        <img src="assets/project-8.png" alt="Project 4" />
+      </div>
+      <div class="card">
+        <img src="assets/project-9.png" alt="Project 5" />
+      </div>
+      <div class="card">
+        <img src="assets/project-10.png" alt="Project 6" />
+      </div>
+      <div class="card">
+        <img src="assets/project-11.png" alt="Project 7" />
+      </div>
+      <div class="card">
+        <img src="assets/project-13.jpeg" alt="Project 8" />
+      </div>
+    </div>
+
+    <svg viewBox="0 0 1320 300">
+      <text x="50%" y="50%" text-anchor="middle">FRONT END WEB DEVELOPER</text>
+    </svg>
+
+    <div class="portfolio">
+      <div class="card">
+        <img src="assets/project-1.jpg" alt="Project 1" />
+      </div>
+      <div class="card">
+        <img src="assets/project-2.jpg" alt="Project 2" />
+      </div>
+      <div class="card">
+        <img src="assets/project-3.jpg" alt="Project 3" />
+      </div>
+      <div class="card">
+        <img src="assets/project-4.jpg" alt="Project 4" />
+      </div>
+    </div>
+  </body>
+</html>
