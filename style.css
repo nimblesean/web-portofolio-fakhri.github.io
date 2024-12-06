@@ -415,7 +415,8 @@ header .container .content .extra-nav a:hover span {
 }
 
 .about .container .content .title h1 {
-  font: italic bold 3.5rem "IBM Plex Sans", sans-serif;
+  font: italic 3.5rem "IBM Plex Sans", sans-serif;
+  font-size: 10px;
 }
 
 .about .container .content .profile-container {
@@ -455,6 +456,7 @@ header .container .content .extra-nav a:hover span {
   font-weight: 500;
   font-style: italic;
   line-height: 1.4rem;
+  flex-direction: column;
 }
 
 .about .container .content .about-me button {
@@ -810,7 +812,7 @@ footer .container .content .social p {
 /* Media Queries untuk Responsivitas */
 @media (max-width: 1200px) {
   .container {
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2rem;
   }
 
   header .container .content {
@@ -823,8 +825,8 @@ footer .container .content .social p {
   }
 
   .hero .container .content .text h1 {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
 
   .about .container .content .title h2 {
@@ -842,7 +844,7 @@ footer .container .content .social p {
 
 @media (max-width: 992px) {
   .container {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 1rem;
   }
 
   header .container .content {
@@ -851,8 +853,8 @@ footer .container .content .social p {
   }
 
   .hero .container .content .text h1 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   .about .container .content {
@@ -885,8 +887,8 @@ footer .container .content .social p {
   }
 
   .hero .container .content .text h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
   .about .container .content .title h1 {
@@ -904,8 +906,8 @@ footer .container .content .social p {
 
 @media (max-width: 576px) {
   .hero .container .content .text h1 {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 
   .about .container .content .title h1 {
