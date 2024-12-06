@@ -273,6 +273,7 @@ header .container .content .extra-nav a:hover span {
   color: var(--black);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--white);
+  text-align: right;
 }
 
 .hero .container .content .arrow {
