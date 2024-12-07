@@ -694,10 +694,9 @@ header .container .content .extra-nav a:hover span {
 }
 
 .contact .container .content .contact-area .left-side h1 {
-  font: 200 4rem "IBM Plex Sans", sans-serif;
+  font: 200 1rem "IBM Plex Sans", sans-serif;
   margin-top: 0.5rem;
   transform: scale(1, 1.5);
- ```css
 }
 
 .contact .container .content .contact-area .left-side h1:nth-child(2) {
