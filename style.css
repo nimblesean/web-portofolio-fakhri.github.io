@@ -504,12 +504,12 @@ header .container .content .extra-nav a:hover span {
 .about .container .content .text-wrapper .text {
   display: flex;
   flex-shrink: 0;
-  gap: 2rem;
-  animation: marquee 8s linear infinite;
+  gap: 5rem;
+  animation: marquee 5s linear infinite;
 }
 
 .about .container .content .text-wrapper .text h1 {
-  font: italic bold 9rem "IBM Plex Sans", sans-serif;
+  font: italic bold 2rem "IBM Plex Sans", sans-serif;
   white-space: nowrap;
 }
 
