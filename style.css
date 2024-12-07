@@ -810,7 +810,7 @@ footer .container .content .social p {
 }
 
 /* Media Queries untuk Responsivitas */
-@media (max-width: 1200px) {
+@media (max-width: 9942px) {
   .container {
     padding: 1.5rem 2rem;
   }
@@ -842,7 +842,7 @@ footer .container .content .social p {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .container {
     padding: 1.5rem 1rem;
   }
@@ -880,7 +880,7 @@ footer .container .content .social p {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   header .container .content nav {
     flex-direction: column;
     gap: 1rem;
